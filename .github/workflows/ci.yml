@@ -17,7 +17,7 @@ jobs:
       - name: build
         run: npm run build
       - name: build artifacts
-        run: zip -r chrome.zip dist/* && zip -r firefox.zip dist/*
+        run: zip -r chrome.zip /dist && zip -r firefox.zip /dist
       - name: version
         run: echo "version=$(npm pkg get version)" >> $GITHUB_OUTPUT
         id: version
