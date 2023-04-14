@@ -19,7 +19,7 @@ jobs:
       - name: build artifacts
         run: zip -r chrome.zip dist && zip -r chrome.zip dist
       - name: version
-        run: echo "npm pkg get version" >> $GH_VER
+        run: echo "version=$(npm pkg get version)" >> $GITHUB_OUTPUT
         id: version
       - name: release
         uses: actions/create-release@v1
@@ -27,7 +27,7 @@ jobs:
         with:
           draft: false
           prerelease: false
-          release_name: ${{ $GH_VER }}
+          release_name: ${{ steps.version.outputs.version }}
           tag_name: ${{ github.ref }}
           body_path: CHANGELOG.md
         env:
