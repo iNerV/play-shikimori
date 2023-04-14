@@ -1,9 +1,6 @@
 ---
 name: CI
-on:
-  push:
-    tags:
-      - "*"
+on: push
 
 jobs:
   build:
@@ -14,9 +11,9 @@ jobs:
       - name: Use node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "12.x"
+          node-version: "19.x"
       - name: install dependencies
-        run: npm ci
+        run: npm install
       - name: build
         run: npm run build
       - name: build artifacts
