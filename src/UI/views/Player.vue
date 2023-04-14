@@ -20,8 +20,6 @@
 
             <controls class="mt-2"></controls>
         </v-layout>
-
-        <comments-feed class="mt-2"></comments-feed>
     </main>
 </template>
 
@@ -30,7 +28,6 @@
     import {sync} from '@/helpers/chrome-storage';
     import {getReviewUrl} from '@/helpers/get-review-url';
     import {push as message} from '@/helpers/runtime-messages';
-    import CommentsFeed from '@/UI/components/comments-feed/index.vue';
     import Controls from '@/UI/components/controls/index.vue';
     import EpisodeList from '@/UI/components/episode-list.vue';
     import Player from '@/UI/components/player.vue';
@@ -45,7 +42,6 @@
             EpisodeList,
             TranslationList,
             Player,
-            CommentsFeed,
             Controls,
         },
     })

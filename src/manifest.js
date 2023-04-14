@@ -7,6 +7,7 @@ const permissions = [
 
 const origins = [
     'https://shikimori.one/*',
+    'https://shikimori.me/*',
     'https://smotret-anime-365.ru/*',
     'https://smotret-anime.online/*',
     'https://api.jikan.moe/*',
@@ -18,8 +19,6 @@ const manifest = {
     name: '__MSG_extName__',
 
     default_locale: 'ru',
-
-    homepage_url: 'https://t.me/playshikionline',
 
     icons: {
         '192': 'play.png',
@@ -59,6 +58,7 @@ const manifest = {
             matches: [
                 'https://shikimori.org/*',
                 'https://shikimori.one/*',
+                'https://shikimori.me/*',
             ],
             js: [
                 'shikimori-watch-button.js',

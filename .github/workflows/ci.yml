@@ -1,0 +1,55 @@
+---
+name: CI
+on:
+  push:
+    tags:
+      -"*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Use node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "12.x"
+      - name: install dependencies
+        run: npm ci
+      - name: build
+        run: npm run build
+      - name: build artifacts
+        run: zip -r chrome.zip dist && zip -r chrome.zip dist
+      - name: version
+        run: echo "::set-output name=version::$(npm pkg get version)"
+        id: version
+      - name: release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: false
+          prerelease: false
+          release_name: ${{ steps.version.outputs.version }}
+          tag_nameL ${{ github.ref }}
+          body_path: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: upload chrome artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./chrome.zip
+          asset_name: chrome.zip
+          asset_content_type: application/zip
+      - name: upload firefox artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./firefox.zip
+          asset_name: firefox.zip
+          asset_content_type: application/zip

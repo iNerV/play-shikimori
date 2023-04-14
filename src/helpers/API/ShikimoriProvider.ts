@@ -1,7 +1,7 @@
 import {RequestProvider} from '@/helpers/API/RequestProvider';
 
 export class ShikimoriProvider extends RequestProvider {
-    public static baseURL = 'https://shikimori.one';
+    public static baseURL = 'https://shikimori.me';
 
     protected static async checkResponse(
         resp: Response,

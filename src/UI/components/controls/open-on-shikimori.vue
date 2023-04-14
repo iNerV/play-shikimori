@@ -1,7 +1,7 @@
 <template>
     <v-btn
         :disabled="!shikiID"
-        :href="`https://shikimori.one/animes/${shikiID}`"
+        :href="`https://shikimori.me/animes/${shikiID}`"
         @click.stop
         aria-label="Открыть на Шикимори"
         class="open-on-shikimori"

@@ -3,7 +3,6 @@ const CopyPlugin = require('copy-webpack-plugin')
 
 const baseManifest = require('./src/manifest.js').default
 const pkg = require('./package.json')
-process.env.BROWSER = process.env.BROWSER || 'firefox'
 
 
 module.exports = {
@@ -46,7 +45,7 @@ module.exports = {
 
     lintOnSave: 'error',
 
-    outputDir: `./dist/${process.env.BROWSER}`,
+    outputDir: './dist',
 
     configureWebpack: {
         devtool: process.env.NODE_ENV === 'production' ? 'source-map' : 'inline-source-map',

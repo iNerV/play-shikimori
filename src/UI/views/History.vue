@@ -25,7 +25,7 @@
             <p class="headline">Здесь будет отображаться ваша история просмотров</p>
             <p class="body-2">
                 Откройте любое аниме на
-                <a href="https://shikimori.one/animes" target="_self">Шикимори</a>
+                <a href="https://shikimori.me/animes" target="_self">Шикимори</a>
                 или
                 <a href="https://myanimelist.net/anime/season" target="_self">MyAnimeList</a>
                 и нажмите «Начать просмотр»

@@ -12,7 +12,7 @@ declare namespace myanimelist {
         filler: boolean;
         recap: boolean;
         video_url: VideoUrl;
-        forum_url: string;
+        url: string;
     }
 
     namespace api {
