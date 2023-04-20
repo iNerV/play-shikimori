@@ -55,7 +55,7 @@ export async function updateAuth() {
 
 export function getNewCode() {
     return new Promise((resolve, reject) => {
-        const url = new URL('https://shikimori.one/oauth/authorize');
+        const url = new URL('https://shikimori.me/oauth/authorize');
         url.searchParams.set('client_id', process.env.VUE_APP_SHIKIMORI_CLIENT_ID);
         url.searchParams.set('redirect_uri', process.env.VUE_APP_SHIKIMORI_REDIRECT_URI);
         url.searchParams.set('response_type', 'code');
@@ -75,7 +75,7 @@ export function getNewCode() {
                     }
 
                     const tabUrl = new URL(changeInfo.url);
-                    if (tabUrl.hostname !== 'shikimori.one'
+                    if (tabUrl.hostname !== 'shikimori.me'
                         || tabUrl.pathname !== '/tests/oauth'
                         || tabUrl.searchParams.get('app') !== 'play-shikimori-online') {
                         return;

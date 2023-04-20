@@ -58,7 +58,7 @@ export async function loadRuntimeMessages(minTimestamp: number, broadcastType = 
                 runtimeMessage.id = comment.id;
 
                 if (!runtimeMessage.link) {
-                    runtimeMessage.link = `https://shikimori.one/comments/${comment.id}`;
+                    runtimeMessage.link = `https://shikimori.me/comments/${comment.id}`;
                 }
 
                 if (!runtimeMessage.html) {

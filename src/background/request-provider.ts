@@ -32,8 +32,6 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     },
     {
         urls: [
-            'https://shikimori.one/api/*',
-            'https://shikimori.one/oauth/*',
             'https://shikimori.me/api/*',
             'https://shikimori.me/oauth/*',
             'https://smotret-anime-365.ru/api/*',

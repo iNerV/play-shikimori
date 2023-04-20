@@ -21,7 +21,7 @@
 
                     <v-list-item-content>
                         <v-list-item-title>Синхронизировать с Шикимори</v-list-item-title>
-                        <v-list-item-subtitle>Все просмотренные серии будут автоматически добавлены в ваш список на shikimori.one</v-list-item-subtitle>
+                        <v-list-item-subtitle>Все просмотренные серии будут автоматически добавлены в ваш список на shikimori.me</v-list-item-subtitle>
                     </v-list-item-content>
 
                     <v-list-item-avatar v-if="user && active">

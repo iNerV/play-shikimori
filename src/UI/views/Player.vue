@@ -136,7 +136,7 @@
                 url.searchParams.append('title', 'Play Шикимори Online');
                 url.searchParams.append(
                     'comment',
-                    'Лучший способ смотреть аниме прямо на сайте shikimori.one',
+                    'Лучший способ смотреть аниме прямо на сайте shikimori.me',
                 );
 
                 await message({

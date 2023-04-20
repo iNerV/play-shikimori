@@ -5,7 +5,7 @@
                 <v-card :to="'/player/anime/' + anime.id + '/' + (anime.episodes + 1)" hover>
                     <v-img
                         :aspect-ratio="225/314"
-                        :src="'https://shikimori.one' + anime.image"
+                        :src="'https://shikimori.me' + anime.image"
                         gradient="to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 68%,rgba(0,0,0,0.8) 100%"
                     >
                         <v-container class="fill-height" fill-height fluid>

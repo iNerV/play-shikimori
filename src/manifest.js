@@ -6,7 +6,6 @@ const permissions = [
 ]
 
 const origins = [
-    'https://shikimori.one/*',
     'https://shikimori.me/*',
     'https://smotret-anime-365.ru/*',
     'https://smotret-anime.online/*',
@@ -56,8 +55,6 @@ const manifest = {
     content_scripts: [
         {
             matches: [
-                'https://shikimori.org/*',
-                'https://shikimori.one/*',
                 'https://shikimori.me/*',
             ],
             js: [
